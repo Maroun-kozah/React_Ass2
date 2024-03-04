@@ -9,7 +9,7 @@ interface DeleteButtonProps {
 const DeleteButton: React.FC<DeleteButtonProps> = ({ onClick }) => {
   return (
     <Button variant="danger" onClick={onClick}>
-      <Trash /> {/* Render the trash icon */}
+      <Trash />
     </Button>
   );
 };
