@@ -1,4 +1,4 @@
-/* Reset CSS */
+
 body, h1, h2, h3, p, ul, li, figure, figcaption {
   margin: 0;
   padding: 0;
@@ -7,9 +7,12 @@ body, h1, h2, h3, p, ul, li, figure, figcaption {
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f8f9fa; /* Set background color */
+  background-color: #f8f9fa;
   display: flex;
-  justify-content: flex-start; /* Align content to the top left */
+  justify-content: flex-start;
+  background: linear-gradient(-45deg, #acaeb1, #bddfec, #454546, #b7a7fc);
+  background-size: 400% 400%;
+  animation: driftAnimation 10s infinite linear;
 }
 
 #root {
@@ -20,32 +23,30 @@ body {
   width: 100%;
 }
 
-
-/* Card styles */
 .card {
   margin-bottom: 20px;
-  background-color: #fff; /* Set card background color */
-  border-radius: 8px; /* Add border radius */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
-  transition: transform 0.3s ease; /* Add transition for hover effect */
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px); /* Add hover effect */
+  transform: translateY(-5px);
 }
 
-/* Form styles */
+
 .form-group {
   margin-bottom: 20px;
 }
 
-/* Container styles */
+
 .container {
   max-width: 800px;
-  margin: 0 auto; /* Center the container */
+  margin: 0 auto;
 }
 
-/* Add animation to logo */
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -55,29 +56,24 @@ body {
   }
 }
 
-/* Add animation to logo when not in reduced motion */
+
 @media (prefers-reduced-motion: no-preference) {
   .logo.react:hover {
     animation: logo-spin infinite 20s linear;
   }
 }
 
-/* Add hover effect to logo */
+
 .logo:hover {
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2)); /* Add drop shadow */
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 }
 
-/* Drift car tabs container */
+
 .drift-car-tabs-container {
   width: 100%;
 }
 
 
-
-
-/* App.css */
-
-/* Background Animation */
 @keyframes driftAnimation {
   0% {
     background-position: 0% 50%;
@@ -90,37 +86,29 @@ body {
   }
 }
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: linear-gradient(-45deg, #acaeb1, #bddfec, #454546, #b7a7fc); /* Gradient background */
-  background-size: 400% 400%;
-  animation: driftAnimation 10s infinite linear; /* Adjust animation duration and timing function as needed */
-}
 
-/* Tab Styles */
 .tab-content {
-  padding-top: 20px; /* Adjust top padding for tab content */
+  padding-top: 20px; 
 }
 
 .nav-tabs .nav-link {
-  color: #495057; /* Tab link color */
+  color: #495057;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid transparent; /* Tab link bottom border */
+  border-bottom: 2px solid transparent;
   border-radius: 0;
 }
 
 .nav-tabs .nav-link.active {
-  color: #007bff; /* Active tab link color */
-  border-color: #007bff; /* Active tab link border color */
+  color: #007bff; 
+  border-color: #007bff; 
 }
 
 .nav-tabs .nav-link:hover {
-  color: #0056b3; /* Hover tab link color */
-  border-color: #0056b3; /* Hover tab link border color */
+  color: #0056b3;
+  border-color: #0056b3;
 }
-/* Animation for adding, completing, and deleting tasks */
+
 .car-item-enter {
   opacity: 0;
   transform: translateY(-20px);
