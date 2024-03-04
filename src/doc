@@ -1,0 +1,5 @@
+I attempted to define its props interface, but I misspelled or incorrectly referenced the interface name.
+I accidentally included an HTML tag within the JSX code, such as using '<div>' instead of '{'div'}...'.
+While implementing transitions or animations using Transition and CSSTransition components, I made mistakes in their usage.
+While implementing animations, I experimented with different animation techniques.
+While coding, I attempted to create a component directly without importing it first. This led to a compilation error or runtime error, such as "Component is not defined" or "Import error."

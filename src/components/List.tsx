@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Table from 'react-bootstrap/Table';
 import { DriftCar } from '../data/driftCarData';
 import DeleteButton from './DeleteButton';
-import { CSSTransition } from 'react-transition-group';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 interface DriftCarListProps {
   cars: DriftCar[];
@@ -36,26 +36,28 @@ const DriftCarList: React.FC<DriftCarListProps> = ({ cars, onDelete, onToggleCom
         </tr>
       </thead>
       <tbody>
-        {cars.map((car) => (
-          <CSSTransition key={car.id} in={car.id !== deletedCarId} timeout={500} classNames="car-item">
-            <tr>
-              <td>{car.title}</td>
-              <td>{car.description}</td>
-              <td>
-                <label>
-                  <input 
-                    type="checkbox" 
-                    checked={car.completed} 
-                    onChange={() => handleToggleCompletion(car.id)} 
-                  />
-                </label>
-              </td>
-              <td>
-                <DeleteButton onClick={() => handleDelete(car.id)} />
-              </td>
-            </tr>
-          </CSSTransition>
-        ))}
+        <TransitionGroup component={null}>
+          {cars.map((car) => (
+            <CSSTransition key={car.id} in={car.id !== deletedCarId} timeout={500} classNames="car-item">
+              <tr>
+                <td>{car.title}</td>
+                <td>{car.description}</td>
+                <td>
+                  <label>
+                    <input 
+                      type="checkbox" 
+                      checked={car.completed} 
+                      onChange={() => handleToggleCompletion(car.id)} 
+                    />
+                  </label>
+                </td>
+                <td>
+                  <DeleteButton onClick={() => handleDelete(car.id)} />
+                </td>
+              </tr>
+            </CSSTransition>
+          ))}
+        </TransitionGroup>
       </tbody>
     </Table>
   );

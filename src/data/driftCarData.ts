@@ -2,7 +2,7 @@ export interface DriftCar {
   id: number;
   title: string;
   description: string;
-  completed: boolean; // New property
+  completed: boolean;
 }
 
 export const initialCars: DriftCar[] = [
